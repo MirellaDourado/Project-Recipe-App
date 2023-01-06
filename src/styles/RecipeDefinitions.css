@@ -1,0 +1,201 @@
+.commun-header {
+  top: 7px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.arrow-left {
+  background-color: white;
+  border-radius: 50%;
+  color: #fe4900;
+  font-size: 50px;
+  position: fixed;
+  z-index: 1000000;
+}
+
+.start-recipe-btn {
+  background: #fe4900;
+  border: none;
+  border-radius: 10px;
+  bottom: 0;
+  color: white;
+  font-weight: 900;
+  height: 40px;
+  position: fixed;
+  width: 100%;
+}
+
+.footer-recipe {
+  display: flex;
+  justify-content: center;
+}
+
+.div-recipe-img {
+  border-radius: 0 0 20px 20px;
+  clip-path: inset(0);
+  height: 400px;
+  position: relative;
+}
+
+.div-recipe-img img {
+  border-radius: 0 0 20px 20px;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.div-flat-bar {
+  align-items: center;
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  height: 21px;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+  width: 100%;
+}
+
+.flat-bar {
+  background-color: rgb(48, 47, 47);
+  border-radius: 50px;
+  height: 7px;
+  width: 80px;
+}
+
+.fav-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: inline;
+  justify-self: center;
+  padding: 15px;
+  position: absolute;
+  right: 30px;
+}
+
+
+.share-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: inline;
+  justify-self: center;
+  left: 30px;
+  padding: 15px;
+  position: absolute;
+}
+
+.header-dif {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000000;
+}
+
+.a {
+  position: relative;
+}
+
+.share-btn img {
+  width: 30px;
+}
+
+.recipe-content h2 {
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.recipe-content {
+  margin-bottom: 20px;
+}
+
+.recipe-category {
+  margin-top: -20px;
+  text-align: center;
+}
+
+.recipe h3, .instructions, .recipe-in-progress h3, .recipe-in-progress label {
+  padding: 0 20px;
+}
+
+.recipe h3, .recipe-in-progress h3 {
+  font-size: 23px;
+}
+
+.recipe-in-progress label span {
+  margin-left: 10px;
+}
+
+.recipe-in-progress label, .instructions {
+  font-size: 18px;
+}
+
+.recipe-in-progress h3:nth-of-type( 2 ) {
+  margin-top: 20px;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+.recipe h3:nth-of-type( 3 ) {
+  color: #fe4900;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.recipe .copied {
+  background-color: #ff5a19f3;
+  border-radius: 5px;
+  bottom: 80px;
+  left: calc(50% - 50px);
+  margin: auto;
+  padding: 5px;
+  position: fixed;
+  text-align: center;
+}
+
+.different-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 4px;
+}
+
+.buttons-area {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.share-btn-header, .fav-btn-header {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: #3c40434d 0 1px 2px 0 , #3c404326 0 2px 6px 2px;
+  padding: 15px;
+}
+
+.recipe-in-progress .finish-recipe-btn {
+  background-color: white;
+  border: 2px #fe4900 solid;
+  border-radius: 15px;
+  color: #fe4900;
+  font-weight: 900;
+  height: 50px;
+  width: 100%;
+}
+
+.recipe-in-progress .finish-recipe-btn:disabled {
+  background-color: rgb(202, 202, 202);
+}

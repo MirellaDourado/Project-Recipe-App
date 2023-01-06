@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-by-meal-btn, .filter-by-drink-btn, .filter-by-all-btn {
+  align-items: center;
+  background-color: white;
+  border: none;
+  color: #fe4900;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  justify-content: center;
+}
+
+.done-recipes {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.btns-done-recipe {
+  background-color: white;
+  box-shadow: #00000029 0 3px 6px , #0000003b 0 3px 6px;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 9999;
+}
+
+.btns-done-recipe p {
+  margin: 0;
+}
+
+.btns-done-recipe .header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.btns-done-recipe .header .arrow-left {
+  position: static;
+}
+
+.done-informations div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns-done-recipe div:nth-of-type( 2 ) {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100vw;
+}
+
+.all-dones {
+  display: flex;
+  flex-direction: column;
+  padding-top: 130px;
+}
+
+.done-card {
+  border-radius: 10px;
+  box-shadow: #0000001f 0 1px 3px , #0000003d 0 1px 2px;
+  display: flex;
+  height: 170px;
+  margin: auto;
+  margin-bottom: 20px;
+  position: relative;
+  width: 98%;
+}
+
+.done-img {
+  border-radius: 10px 0 0 10px;
+  width: 50%;
+}
+
+.done-card a {
+  color: inherit;
+  display: flex;
+  text-decoration: inherit;
+}
+
+.done-informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.done-informations div p {
+  background-color: #d9d9d9;
+  border-radius: 25px;
+  color: #797d86;
+  font-size: 12px;
+  margin: 0;
+  padding: 4px;
+}
+
+.done-title {
+  font-size: 20px;
+}
+
+.done-date {
+  font-size: 12px;
+  margin: auto;
+}
+
+.done-info-food {
+  color: #797d86;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 7px;
+  margin-top: -10px;
+}
+
+.done-name {
+  font-size: 18px;
+  text-align: center;
+}
+
+.copied-warning {
+  background-color: #fe4800d8;
+  border-radius: 10px;
+  left: 40%;
+  padding: 10px;
+  position: fixed;
+  top: 75%;
+}
+
+.done-share-btn {
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  position: absolute;
+  right: -2px;
+  top: -15px;
+  z-index: 998;
+}
+
+.filter-by-meal-btn:focus, .filter-by-drink-btn:focus, .filter-by-all-btn:focus {
+  border-bottom: 2px #fe4900 solid;
+}

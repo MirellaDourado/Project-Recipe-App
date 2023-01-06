@@ -1,0 +1,48 @@
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login input {
+  border: 0.5px #fe4800 solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login button {
+  height: 40px;
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 30px;
+  background-color: #fe4800;
+  color: white;
+  font-weight: 900;
+  border: none;
+}
+
+.login button:disabled {
+  background-color: #fe480088;
+}
+
+.login button:hover {
+  background-color: #ce3a00;
+}
+
+.f-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fe4800;
+}
+
+.buttons-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

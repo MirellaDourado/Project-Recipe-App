@@ -1,0 +1,27 @@
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+}
+
+.inner-item {
+  max-width: 200px;
+  padding: 13px;
+}
+
+.slider-recipe-img {
+  border-radius: 10px 10px 0 0;
+  max-width: 180px;
+  pointer-events: none;
+}
+
+.slider-recipe-btn {
+  background-color: transparent;
+  border: 1px rgba(70, 70, 70, 0.514) solid;
+  border-radius: 10px;
+  height: 210px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,56 @@
+.favorite-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: #0000001f 0 1px 3px , #0000003d 0 1px 2px;
+  height: 170px;
+  margin: auto;
+  margin-bottom: 20px;
+  position: relative;
+  width: 98%;
+}
+
+.favorite-img {
+  border-radius: 10px 0 0 10px;
+  width: 50%;
+}
+
+.button-fav-card {
+  background-color: white;
+  border: none;
+  border-radius: 11px;
+  display: flex;
+}
+
+.fav-fav-card, .share-fav-card {
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  bottom: 0;
+  position: absolute;
+}
+
+.fav-fav-card {
+  right: 45px;
+}
+
+.share-fav-card {
+  height: 35px;
+  right: 90px;
+  width: 40px;
+}
+
+.button-name-food, .button-name-drink {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.fav-recipes {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.fav-recipes .all-dones {
+  margin-bottom: 88px;
+}

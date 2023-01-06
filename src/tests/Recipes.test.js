@@ -1,0 +1,98 @@
+import React from 'react';
+import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import App from '../App';
+import renderWithRouter from './helpers/renderWithRouter';
+
+const emailInput = 'email-input';
+const passwordInput = 'password-input';
+const emailLiteral = 'test@trybe.com';
+
+describe('Teste da page Meals', () => {
+  test('se os filtros por categorias na página meals estão funcionando corretamente', async () => {
+    renderWithRouter(<App />);
+    const inputEmail = screen.getByTestId(emailInput);
+    const inputPassword = screen.getByTestId(passwordInput);
+    const button = screen.getByRole('button', { name: 'Enter' });
+    userEvent.type(inputEmail, emailLiteral);
+    userEvent.type(inputPassword, '1234567');
+    userEvent.click(button);
+    const btnBeef = await screen.findByTestId('Beef-category-filter');
+    expect(btnBeef).toBeInTheDocument();
+    userEvent.click(btnBeef);
+    const mustard = await screen.findByText('Beef and Mustard Pie');
+    expect(mustard).toBeInTheDocument();
+    userEvent.click(btnBeef);
+    const corba = await screen.findByText('Corba');
+    expect(corba).toBeInTheDocument();
+  });
+  test('se os filtros por categorias na página drinks estão funcionando corretamente', async () => {
+    const { history } = renderWithRouter(<App />);
+    const inputEmail = screen.getByTestId(emailInput);
+    const inputPassword = screen.getByTestId(passwordInput);
+    const button = screen.getByRole('button', { name: 'Enter' });
+    userEvent.type(inputEmail, emailLiteral);
+    userEvent.type(inputPassword, '1234567');
+    userEvent.click(button);
+    history.push('/drinks');
+    const btnOrdinary = await screen.findByTestId('Ordinary Drink-category-filter');
+    expect(btnOrdinary).toBeInTheDocument();
+    userEvent.click(btnOrdinary);
+    const Gone = await screen.findByText('410 Gone');
+    expect(Gone).toBeInTheDocument();
+    userEvent.click(btnOrdinary);
+    const GG = await screen.findByText('GG');
+    expect(GG).toBeInTheDocument();
+  });
+  test('se o botão All da página meals desfaz o filtro selecionado', async () => {
+    renderWithRouter(<App />);
+    const inputEmail = screen.getByTestId(emailInput);
+    const inputPassword = screen.getByTestId(passwordInput);
+    const button = screen.getByRole('button', { name: 'Enter' });
+    userEvent.type(inputEmail, emailLiteral);
+    userEvent.type(inputPassword, '1234567');
+    userEvent.click(button);
+    const btnBeef = await screen.findByTestId('Beef-category-filter');
+    expect(btnBeef).toBeInTheDocument();
+    userEvent.click(btnBeef);
+    const mustard = await screen.findByText('Beef and Mustard Pie');
+    expect(mustard).toBeInTheDocument();
+    const btnAll = await screen.findByTestId('All-category-filter');
+    userEvent.click(btnAll);
+    const corba = await screen.findByText('Corba');
+    expect(corba).toBeInTheDocument();
+  });
+  test('se os filtros por categorias na página drinks estão funcionando corretamente', async () => {
+    const { history } = renderWithRouter(<App />);
+    const inputEmail = screen.getByTestId(emailInput);
+    const inputPassword = screen.getByTestId(passwordInput);
+    const button = screen.getByRole('button', { name: 'Enter' });
+    userEvent.type(inputEmail, emailLiteral);
+    userEvent.type(inputPassword, '1234567');
+    userEvent.click(button);
+    history.push('/drinks');
+    const btnOrdinary = await screen.findByTestId('Ordinary Drink-category-filter');
+    expect(btnOrdinary).toBeInTheDocument();
+    userEvent.click(btnOrdinary);
+    const Gone = await screen.findByText('410 Gone');
+    expect(Gone).toBeInTheDocument();
+    const btnAll = await screen.findByTestId('All-category-filter');
+    userEvent.click(btnAll);
+    const GG = await screen.findByText('GG');
+    expect(GG).toBeInTheDocument();
+  });
+  test('se ao clicar no drink é redirecionado para página de detalhes do drink', async () => {
+    const { history } = renderWithRouter(<App />);
+    const inputEmail = screen.getByTestId(emailInput);
+    const inputPassword = screen.getByTestId(passwordInput);
+    const button = screen.getByRole('button', { name: 'Enter' });
+    userEvent.type(inputEmail, emailLiteral);
+    userEvent.type(inputPassword, '1234567');
+    userEvent.click(button);
+    history.push('/drinks');
+    const GG = await screen.findByText('GG');
+    expect(GG).toBeInTheDocument();
+    userEvent.click(GG);
+    expect(history.location.pathname).toEqual('/drinks/15997');
+  });
+});

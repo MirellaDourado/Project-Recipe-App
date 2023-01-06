@@ -1,0 +1,57 @@
+.profile-area {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.profile-email {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.profile-area .header {
+  align-items: center;
+  background-color: #fe4800c5;
+  border-radius: 0 0 10rem 10rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  width: 100%;
+}
+
+.profile-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 60%;
+  justify-content: space-evenly;
+}
+
+.profile-options button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px #fe4800c5 solid;
+  color: #797d86;
+  display: flex;
+  font-size: 20px;
+  gap: 20px;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+}
+
+.profile-area .footer-recipe {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #FE8352;
+  height: 60px;
+  align-items: center;
+}
+
+.profile-area .footer-recipe button {
+  border: none;
+  background-color: transparent;
+}
